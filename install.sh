@@ -48,10 +48,13 @@ echo "Removing previous version (if found)..."
 mkdir -p ~/.local/share/nautilus-python/extensions
 rm -f ~/.local/share/nautilus-python/extensions/VSCodeExtension.py
 rm -f ~/.local/share/nautilus-python/extensions/code-nautilus.py
+rm -f ~/.local/share/icons/hicolor/48x48/apps/code-nautilus.png
 
 # Download and install the extension
 echo "Downloading newest version..."
-wget -q -O ~/.local/share/nautilus-python/extensions/code-nautilus.py https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/code-nautilus.py
+wget -q -O ~/.local/share/icons/hicolor/48x48/apps/code-nautilus.png https://raw.githubusercontent.com/Karthik-S-Salian/code-nautilus/master/assets/code-nautilus.png
+gtk-update-icon-cache ~/.local/share/icons/hicolor
+wget -q -O ~/.local/share/nautilus-python/extensions/code-nautilus.py https://raw.githubusercontent.com//Karthik-S-Salian/code-nautilus/master/code-nautilus.py
 
 # Restart nautilus
 echo "Restarting nautilus..."
